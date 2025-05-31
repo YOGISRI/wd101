@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+        <h1 class="text-2xl font-bold mb-6 text-center">User Registration</h1>
+        
+        <form id="registrationForm" class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" required 
+                       class="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required 
+                       class="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required 
+                       class="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+                <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required 
+                       class="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div class="flex items-center">
+                <input type="checkbox" id="acceptTerms" name="acceptTerms" required 
+                       class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="acceptTerms" class="ml-2 text-sm text-gray-700">Accept Terms & Conditions</label>
+            </div>
+            
+            <button type="submit" 
+                    class="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Register
+            </button>
+        </form>
+
+        <div id="error" class="text-red-600 text-center mt-4 hidden p-2 bg-red-100 border border-red-400 rounded"></div>
+
+        <h2 class="text-xl font-bold mt-8 mb-4 text-center">Registered Users</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6 text-left border-b border-gray-300">Name</th>
+                        <th class="py-3 px-6 text-left border-b border-gray-300">Email</th>
+                        <th class="py-3 px-6 text-left border-b border-gray-300">Password</th>
+                        <th class="py-3 px-6 text-left border-b border-gray-300">Dob</th>
+                        <th class="py-3 px-6 text-left border-b border-gray-300">Accepted terms?</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable" class="text-gray-600 text-sm font-light">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
